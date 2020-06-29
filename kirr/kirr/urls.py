@@ -18,11 +18,13 @@ from django.urls import path
 import os
 print("Current working directory \n")
 print(os.getcwd())
-from kirr.shortner.views import kirr_redirect_view,KirrRedirectView
-from kirr import shortner
+
+from kirr.shortner import views
+#from kirr.shortner.views import kirr_redirect_view,KirrRedirectView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('view-1',kirr_redirect_view()),
-    path('view-2',KirrRedirectView()),
+    path('view-1',views.kirr_redirect_view()),
+    path('view-2',views.KirrRedirectView()),
 ]
