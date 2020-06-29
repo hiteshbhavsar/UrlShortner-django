@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+import os
+print("Current working directory \n")
+print(os.getcwd())
+from kirr.shortner.views import kirr_redirect_view,KirrRedirectView
+from kirr import shortner
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('view-1',kirr_redirect_view()),
+    path('view-2',KirrRedirectView()),
 ]

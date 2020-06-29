@@ -32,7 +32,7 @@ class KirrURL(models.Model):
 
 
     def save(self,*args,**kwargs):
-        print("Overriding default method")
+        #print("Overriding default method")
         if self.shortcode is None or self.shortcode=="":
             self.shortcode=code_generator()
         super(KirrURL,self).save(*args,**kwargs)
